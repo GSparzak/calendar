@@ -1,0 +1,43 @@
+body {
+    width: 100%;
+}
+footer {
+    height: 50px;
+}
+main {
+    width:60%;
+    margin: auto;
+    /*text-align: center;*/
+}
+.clear {
+    clear: both;
+}
+div {
+    /*margin: auto;*/
+    /*text-align: center;*/
+}
+.zmien-miesiac {
+    height: 40px;
+    width: 50px;
+    float: left;
+}
+.zmien-miesiac i {
+    font-size: xx-large;
+}
+table {
+    margin: auto;
+    margin-top: 10px;
+    /*text-align: center;*/
+    border-collapse: collapse;
+    border: solid 1px black;
+}
+table td {
+    height: 75px;
+    width: 100px;
+    border: solid 1px black;
+}
+
+.days-of-week td {
+    height: 20px;
+    text-align: center;
+}
