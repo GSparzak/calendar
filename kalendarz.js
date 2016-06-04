@@ -1,5 +1,5 @@
 'use strict';
-(function () {
+
     var months = ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj',
         'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik',
         'Listopad', 'Grudzień'];
@@ -33,9 +33,22 @@
         }
     }
 
+    function changeYear () {
+        if (currentMonth === 12) {
+            currentMonth = 0;
+            currentYear += 1;
+        } else {
+            currentMonth = 11;
+            currentYear -= 1;
+        }
+    }
+
     function changeMonth(znak) {
         clearCallendar();
         currentMonth = currentMonth + znak;
+        if (currentMonth === 12 || currentMonth === -1){
+            changeYear();
+        }
         $currentMonth.html(months[currentMonth]);
         $currentYear.html(currentYear);
         firstDay = new Date(currentYear, currentMonth).getDay();
@@ -50,5 +63,3 @@
     $('#nextMonth').click(function () {
         changeMonth(1);
     });
-
-}) ();
